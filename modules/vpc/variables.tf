@@ -3,8 +3,8 @@
 variable "cidr_block" {}
 variable "public_subnet_cidr" {}
 
-variable "az1" {}
-variable "az2" {}
+variable "availability_zone1" {}
+variable "availability_zone2" {}
 variable "env" {}
 
 variable "private_subnet_1_cidr" {

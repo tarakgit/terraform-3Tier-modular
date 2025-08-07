@@ -4,8 +4,8 @@ module "vpc" {
   public_subnet_cidr = var.public_subnet_cidr
   private_subnet_1_cidr = var.private_subnet_1_cidr
   private_subnet_2_cidr = var.private_subnet_2_cidr
-  az1                 = var.availability_zone1
-  az2 		      = var.availability_zone2
+  availability_zone1  = var.availability_zone1
+  availability_zone2 = var.availability_zone2
   env                = var.env
 }
 
@@ -16,6 +16,7 @@ module "ec2" {
   instance_type  = var.instance_type
   subnet_id      = module.vpc.public_subnet_id
   key_name       = aws_key_pair.generated_key.key_name
+  security_group_id = [module.vpc.ec2_sg_id]  # ✅ attach correct SG  if not assigned it takes the default sg
   env            = var.env
   project        = var.project     # ✅ Add this
 }

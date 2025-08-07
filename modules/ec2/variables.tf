@@ -4,3 +4,4 @@ variable "subnet_id" {}
 variable "key_name" {}
 variable "env" {}
 variable "project" {}
+variable "security_group_id" {}

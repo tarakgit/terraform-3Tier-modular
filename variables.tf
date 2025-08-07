@@ -19,7 +19,7 @@ variable "ami_id" {}
 variable "instance_type" {}
 #variable "key_name" {} its system generated and not being passed with tf.vars in main.tf
 variable "project" {}
-
+#variable "vpc_security_group_ids" {}
 
 # RDS
 
