@@ -1,12 +1,12 @@
-name: Deploy Infra-3Tierbuild
+name: Destroy Infra-3Tierbuild
 
 on:
   
   workflow_dispatch:  # 👈 Manual trigger from GitHub UI
 
 jobs:
-  terraform-Apply:
-    name: "Terraform plan and Apply"
+  terraform-Destroy:
+    name: "Terraform Destroy"
     runs-on: ubuntu-latest
 
     env:
